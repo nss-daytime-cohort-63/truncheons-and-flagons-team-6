@@ -1,12 +1,12 @@
+import { AddPlayer } from "./players.js"
+import { AddTeam } from "./teams.js"
 
 
 
 export const TruncheonAndFlagons = () => {
     
-    
-    
-    let html = `
-    <nav id="selectionOptions">
+    return  `
+<nav id="selectionOptions">
     <div id="newGame">
     </div>
     <div id="rosters">
@@ -18,8 +18,10 @@ export const TruncheonAndFlagons = () => {
 <main id="contentBody">
     <aside id="leftColumn">
         <div id="addTeam">
+        ${AddTeam()}
         </div>
         <div id="addPlayer">
+        ${AddPlayer()}
         </div>
         <div id="leaderboard">
         </div>
@@ -29,5 +31,4 @@ export const TruncheonAndFlagons = () => {
 </main>`
 
 
-return html
 }

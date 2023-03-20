@@ -1,5 +1,27 @@
-import { NewGame } from "./currentGame.js";
-import { fetchCompletedGames, fetchPlayers, fetchScores, fetchTeams } from "./dataAccess.js";
+import { fetchPlayers, fetchTeams, fetchScores, fetchCompletedGames } from "./dataAccess.js"
+import { TruncheonAndFlagons } from "./tandf.js"
 
-fetchPlayers().then(() => fetchTeams()).then(() => fetchCompletedGames()).then(() => fetchScores())
-document.querySelector(".mainContainer").innerHTML = NewGame()
+
+const mainContainer = document.querySelector("#mainContainer")
+
+
+const render = () => {
+    fetchPlayers()
+        .then(() => fetchTeams())
+        .then(() => fetchScores() )
+        .then(() => fetchCompletedGames() )
+        .then(
+            () => {
+                mainContainer.innerHTML = TruncheonAndFlagons()
+            }
+        )
+}
+
+render()
+
+mainContainer.addEventListener(
+    "stateChanged",
+    customEvent => {
+        render()
+    }
+)

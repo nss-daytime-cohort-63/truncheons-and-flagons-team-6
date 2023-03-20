@@ -1,6 +1,7 @@
 const applicationState = {}
 const API = "http://localhost:8088"
 
+
 export const fetchPlayers = () => {
     return fetch(`${API}/players`)
         .then(response => response.json())
@@ -54,7 +55,7 @@ export const sendPlayer = (newPlayer) => {
     return fetch(`${API}/players`, fetchOptions)
     .then(response => response.json())
     .then(() => {
-        container.dispatchEvent(new CustomEvent("stateChanged"))
+        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
     })
 }
 export const sendTeam = (newTeam) => {
@@ -70,7 +71,7 @@ export const sendTeam = (newTeam) => {
     return fetch(`${API}/teams`, fetchOptions)
     .then(response => response.json())
     .then(() => {
-        container.dispatchEvent(new CustomEvent("stateChanged"))
+        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
     })
 }
 export const sendScore = (newScore) => {
@@ -86,7 +87,7 @@ export const sendScore = (newScore) => {
     return fetch(`${API}/scores`, fetchOptions)
     .then(response => response.json())
     .then(() => {
-        container.dispatchEvent(new CustomEvent("stateChanged"))
+        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
     })
 }
 export const sendCompletedGame = (newCompletedGame) => {
@@ -102,7 +103,7 @@ export const sendCompletedGame = (newCompletedGame) => {
     return fetch(`${API}/completedGames`, fetchOptions)
     .then(response => response.json())
     .then(() => {
-        container.dispatchEvent(new CustomEvent("stateChanged"))
+        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
     })
 }
 export const getPlayers =() =>{
