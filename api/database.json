@@ -98,19 +98,19 @@
   "scores": [
     {
       "id": 0,
-      "completedGameId": 1,
+      "completedGameId": 0,
       "teamId": 1,
       "score": 5
     },
     {
       "id": 1,
-      "completedGameId": 1,
+      "completedGameId": 0,
       "teamId": 2,
       "score": 8
     },
     {
       "id": 2,
-      "completedGameId": 1,
+      "completedGameId": 0,
       "teamId": 3,
       "score": 4
     }
