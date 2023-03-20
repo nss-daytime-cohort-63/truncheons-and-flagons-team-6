@@ -1,4 +1,5 @@
 import { NewGame, newGameForm } from "./newGame.js"
+import { renderPastGames } from "./pastGames.js"
 import { AddPlayer } from "./players.js"
 import { AddTeam } from "./teams.js"
 
