@@ -1,3 +1,4 @@
+import { NewGame, newGameForm } from "./newGame.js"
 import { renderPastGames } from "./pastGames.js"
 import { AddPlayer } from "./players.js"
 import { AddTeam } from "./teams.js"
@@ -9,6 +10,7 @@ export const TruncheonAndFlagons = () => {
     return  `
 <nav id="selectionOptions">
     <div id="newGame">
+    ${NewGame()}
     </div>
     <div id="rosters">
     </div>
@@ -28,6 +30,7 @@ export const TruncheonAndFlagons = () => {
         </div>
     </aside>
     <section id="renderedData">
+    ${newGameForm()}
     </section>
 </main>`
 
