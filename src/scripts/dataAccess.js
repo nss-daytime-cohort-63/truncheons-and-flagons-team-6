@@ -12,7 +12,7 @@ export const fetchPlayers = () => {
         )
 }
 export const fetchTeams = () => {
-    return fetch(`${API}/teamss`)
+    return fetch(`${API}/teams`)
         .then(response => response.json())
         .then(
             (returnedTeams) => {
