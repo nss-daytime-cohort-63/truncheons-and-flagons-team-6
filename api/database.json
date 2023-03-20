@@ -1,112 +1,118 @@
 {
-    "players":[
-        {
-            "id": 0,
-            "name": "John Wilkes Booth",
-            "teamId": 1,
-            "isActive": true
-        },
-        {
-            "id": 1,
-            "name": "Abraham Lincoln",
-            "teamId": 1,
-            "isActive": false
-        },
-        {
-            "id": 2,
-            "name": "Lee Harvey Oswald",
-            "teamId": 1,
-            "isActive": true
-        },
-        {
-            "id": 3,
-            "name": "Richard Lawrence",
-            "teamId": 1,
-            "isActive": true
-        },
-        {
-            "id": 4,
-            "name": "Tony Hawk",
-            "teamId": 2,
-            "isActive": true
-        },
-        {
-            "id": 5,
-            "name": "Louis Armstrong",
-            "teamId": 2,
-            "isActive": true
-        },
-        {
-            "id": 6,
-            "name": "Megan Markle",
-            "teamId": 2,
-            "isActive": true
-        },
-        {
-            "id": 7,
-            "name": "Shogun Shaītomo",
-            "teamId": 3,
-            "isActive": true
-        },
-        {
-            "id": 8,
-            "name": "Bruce Lee",
-            "teamId": 3,
-            "isActive": true
-        },
-        {
-            "id": 9,
-            "name": "Jacqueline Kennedy",
-            "teamId": 3,
-            "isActive": true
-        }
-    ],
-    "teams":[
-        {
-            "id": 0,
-            "name": "Free Agents",
-            "dateCreated": 0
-        },
-        {
-            "id": 1,
-            "name": "Hat Knockers",
-            "dateCreated": 1679335783
-        },
-        {
-            "id": 2,
-            "name": "Shuffleboard Surfers",
-            "dateCreated": 1679335784
-        },
-        {
-            "id": 3,
-            "name": "Karate Katanas",
-            "dateCreated": 1679335785
-        }
-    ],
-    "completedGames":[
-        {
-            "id": 0,
-            "date": 1679336115
-        }
-    ],
-    "scores":[
-        {
-            "id": 0,
-            "completedGameId": 1,
-            "teamId": 1,
-            "score": 5
-        },
-        {
-            "id": 1,
-            "completedGameId": 1,
-            "teamId": 2,
-            "score": 8
-        },
-        {
-            "id": 2,
-            "completedGameId": 1,
-            "teamId": 3,
-            "score": 4
-        }
-    ]
+  "players": [
+    {
+      "id": 0,
+      "name": "John Wilkes Booth",
+      "teamId": 1,
+      "isActive": true
+    },
+    {
+      "id": 1,
+      "name": "Abraham Lincoln",
+      "teamId": 1,
+      "isActive": false
+    },
+    {
+      "id": 2,
+      "name": "Lee Harvey Oswald",
+      "teamId": 1,
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "name": "Richard Lawrence",
+      "teamId": 1,
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "Tony Hawk",
+      "teamId": 2,
+      "isActive": true
+    },
+    {
+      "id": 5,
+      "name": "Louis Armstrong",
+      "teamId": 2,
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "name": "Megan Markle",
+      "teamId": 2,
+      "isActive": true
+    },
+    {
+      "id": 7,
+      "name": "Shogun Shaītomo",
+      "teamId": 3,
+      "isActive": true
+    },
+    {
+      "id": 8,
+      "name": "Bruce Lee",
+      "teamId": 3,
+      "isActive": true
+    },
+    {
+      "id": 9,
+      "name": "Jacqueline Kennedy",
+      "teamId": 3,
+      "isActive": true
+    },
+    {
+      "name": "John Jacobson",
+      "teamId": 0,
+      "isActive": false,
+      "id": 10
+    }
+  ],
+  "teams": [
+    {
+      "id": 0,
+      "name": "Free Agents",
+      "dateCreated": 0
+    },
+    {
+      "id": 1,
+      "name": "Hat Knockers",
+      "dateCreated": 1679335783
+    },
+    {
+      "id": 2,
+      "name": "Shuffleboard Surfers",
+      "dateCreated": 1679335784
+    },
+    {
+      "id": 3,
+      "name": "Karate Katanas",
+      "dateCreated": 1679335785
+    }
+  ],
+  "completedGames": [
+    {
+      "id": 0,
+      "date": 1679336115
+    }
+  ],
+  "scores": [
+    {
+      "id": 0,
+      "completedGameId": 1,
+      "teamId": 1,
+      "score": 5
+    },
+    {
+      "id": 1,
+      "completedGameId": 1,
+      "teamId": 2,
+      "score": 8
+    },
+    {
+      "id": 2,
+      "completedGameId": 1,
+      "teamId": 3,
+      "score": 4
+    }
+  ]
 }
