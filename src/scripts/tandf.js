@@ -1,3 +1,4 @@
+import { renderPastGames } from "./pastGames.js"
 import { AddPlayer } from "./players.js"
 import { AddTeam } from "./teams.js"
 
