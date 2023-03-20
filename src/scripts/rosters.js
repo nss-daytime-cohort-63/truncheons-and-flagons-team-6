@@ -11,16 +11,10 @@ export const Rosters = () => {
 }
 
 
-export const teamDisplay = () => {
-    const teams = allTeams() // using the imported all teams dropdown
-    let html = `<h2>Select a Team</h2>`
-    html += `${teams}` // imported teams dropdown
-    html += `${playersTeam()}` // list of players on the team
-    return html
-}
 
 
-// gets an unordered list of players on the team
+
+// gets an unordered list of players on the team -- needs to be rewritten
 export const playersTeam = () => {
     const players = getPlayers()
     const teams = getTeams()
@@ -36,11 +30,22 @@ export const playersTeam = () => {
     return html
 }
 
+export const teamDisplay = () => {
+    const teams = allTeams() // using the imported all teams dropdown
+    let html = `<h2>Select a Team</h2>`
+    html += `${teams}` // imported teams dropdown
+    html += `${playersTeam()}` // list of players on the team
+    return html
+}
+
+const mainContainer = document.querySelector("#mainContainer")
+// const renderHTML = document.querySelector("#renderedData")
 
 // click event not yet fleshed out - query select same div 
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "rosters") {
         // render the entire page 
+        mainContainer.innerHTML = teamDisplay()
     }
     })
 
@@ -49,5 +54,6 @@ mainContainer.addEventListener("click", clickEvent => {
 mainContainer.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "teams") {
         // lists roster for that team
+        mainContainer.innerHTML = teamDisplay()
     }
 })
