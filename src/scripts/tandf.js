@@ -1,6 +1,7 @@
 import { NewGame, newGameForm } from "./newGame.js"
 import { PastGames, renderPastGames } from "./pastGames.js"
 import { AddPlayer } from "./players.js"
+import { Rosters } from "./rosters.js"
 import { AddTeam } from "./teams.js"
 
 
@@ -13,6 +14,7 @@ export const TruncheonAndFlagons = () => {
     ${NewGame()}
     </div>
     <div id="rosters">
+    ${Rosters()}
     </div>
     <div id="pastGames">
     ${PastGames()}
