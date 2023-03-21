@@ -1,5 +1,9 @@
 import { getTeams } from "./dataAccess.js"
 
+let team1 = 0;
+let team2 = 0;
+let team3 = 0;
+
 const _teamSelectOptionBuilder = () => {
     const teams = getTeams();
     let html = "";
@@ -46,16 +50,18 @@ const mainContainer = document.querySelector("#mainContainer")
         document.getElementById("startGame").className = "shown";
     }
 })
-
+*/
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "startGame") {
-        document.getElementById("team1Select").className = "hidden";
-        document.getElementById("team2Select").className = "hidden";
-        document.getElementById("team3Select").className = "hidden";
-        document.getElementById("startGame").className = "hidden";
+        if(team1 !== 0 && team1 !== team2 && team1 !== team3 && team2 !== 0 && team3 !== 0 && !!team1 && !!team2 && !!team3){
+            console.log(":)")
+        }
+        else{
+            window.alert("You must select unique teams to start a game!")
+        }
     }
 })
- */
+
 
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "newGame") {
@@ -63,4 +69,17 @@ mainContainer.addEventListener("click", clickEvent => {
         renderedData.innerHTML = newGameForm()
  
     }
+})
+
+mainContainer.addEventListener("change", event=>{
+    if(event.target.id === "team1Select"){
+        team1 = parseInt(document.getElementById("team1Select").value)
+    }
+    else if(event.target.id === "team2Select"){
+        team2 = parseInt(document.getElementById("team2Select").value)
+    }
+    else if(event.target.id === "team3Select"){
+        team3 = parseInt(document.getElementById("team3Select").value)
+    }
+    
 })
