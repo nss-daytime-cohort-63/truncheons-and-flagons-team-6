@@ -2,8 +2,9 @@ import { fetchPlayers, fetchTeams, fetchScores, fetchCompletedGames } from "./da
 import { TruncheonAndFlagons } from "./tandf.js"
 
 
-const mainContainer = document.querySelector("#mainContainer")
 
+const mainContainer = document.querySelector("#mainContainer")
+const renderHTML = document.querySelector("#renderedData")
 
 const render = () => {
     fetchPlayers()
@@ -25,3 +26,5 @@ mainContainer.addEventListener(
         render()
     }
 )
+
+
