@@ -17,16 +17,16 @@ export const Rosters = () => {
 // gets an unordered list of players on the team -- needs to be rewritten
 export const playersTeam = () => {
     const players = getPlayers()
-    const teams = getTeams()
-    let html = `<ul>`
+    let currentTeam = parseInt(document.querySelector("#teams").value)
+    let html = `<div id="team-players"><ul>` // need if statement
     for (const player of players) {
-        for (const team of teams) {
-            if (player.teamId === team.id) {
+        
+            if (player.teamId === currentTeam) {
                 html += `<li>${player.name}</li>`
             }
-        }
+        
     }
-    html += `</ul>`
+    html += `</ul></div>`
     return html
 }
 
@@ -39,13 +39,13 @@ export const teamDisplay = () => {
 }
 
 const mainContainer = document.querySelector("#mainContainer")
-// const renderHTML = document.querySelector("#renderedData")
 
-// click event not yet fleshed out - query select same div 
+// click event - query select same div 
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "rosters") {
         // render the entire page 
-        mainContainer.innerHTML = teamDisplay()
+        const renderHTML = document.querySelector("#renderedData")
+        renderHTML.innerHTML = teamDisplay()
     }
     })
 
@@ -54,6 +54,7 @@ mainContainer.addEventListener("click", clickEvent => {
 mainContainer.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "teams") {
         // lists roster for that team
-        mainContainer.innerHTML = teamDisplay()
+        const renderHTML = document.querySelector("#team-players")
+        renderHTML.innerHTML = playersTeam()
     }
 })
