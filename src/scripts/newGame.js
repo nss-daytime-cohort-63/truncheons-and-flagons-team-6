@@ -53,7 +53,7 @@ const mainContainer = document.querySelector("#mainContainer")
 */
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "startGame") {
-        if(team1 !== 0 && team1 !== team2 && team1 !== team3 && team2 !== 0 && team3 !== 0 && !!team1 && !!team2 && !!team3){
+        if(team1 !== 0 && team1 !== team2 && team1 !== team3 && team2 !== 0 && team3 !== 0 && !!team1 && !!team2 && !!team3 && team2 !== team3){
             console.log(":)")
         }
         else{
