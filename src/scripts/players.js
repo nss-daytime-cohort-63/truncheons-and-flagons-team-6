@@ -41,6 +41,15 @@ mainContainer.addEventListener("click", clickEvent => {
         }
 
         // Send the data to the API for permanent storage
-        sendPlayer(dataToSendToAPI)
+        if(newFirstName === "" && newLastName === ""){
+            window.alert("Please populate the first and last name.")
+        } else if(newFirstName === "" && newLastName !== ""){
+            window.alert("Please populate the first name.")
+        } else if(newFirstName !== "" && newLastName === ""){
+            window.alert("Please populate the last name.")
+        } else{
+            sendPlayer(dataToSendToAPI)
+        }
+        
     }
 })
