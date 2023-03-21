@@ -1,3 +1,94 @@
 .hidden{
     display: none;
 }
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #12181c;
+    color: white;
+}
+
+h1{
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    font-size: 3em;
+}
+
+input, button, select{
+    background-color: #df0101;
+    border: 1px solid #953939;
+    color: #e8e5d9
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.navButton{
+    padding: 5px 10px;
+    width: 10em;
+    height: 3em;
+    border: 1px solid #953939
+
+    
+}
+
+
+
+table{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+td{
+    text-align: center
+}
+
+.tableHeaderRow{
+    background-color: #df0101;
+}
+
+.tableRow:nth-of-type(even){
+    background-color: #e15656;
+}
+.tableRow:nth-of-type(odd){
+    background-color: #ff6b61;
+}
+
+
+
+#contentBody{
+    display:flex;
+}
+#leftColumn{
+    width: 20%;
+    padding-left: 5em
+}
+#renderedData{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    padding-top: 2em;
+}
+
+.rosterDropdown{
+    width: 15rem;
+    height: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+#startGame{
+    width: 15rem;
+    height: 3rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 5em 0;
+}

@@ -5,7 +5,7 @@ import { allTeams } from "./teams.js"
 // button created
 export const Rosters = () => {
     const html = `
-    <button id="rosters">Rosters</button>
+    <button id="rosters" class="navButton">Rosters</button>
     `
     return html
 }
@@ -17,7 +17,14 @@ export const Rosters = () => {
 // gets an unordered list of players on the team -- needs to be rewritten
 export const playersTeam = () => {
     const players = getPlayers()
-    let currentTeam = parseInt(document.querySelector("#teams").value)
+    let currentTeam = 0
+    if(!document.querySelector(".rosterDropdown")){
+         currentTeam = 0
+    }else{
+         currentTeam = parseInt(document.querySelector(".rosterDropdown").value)
+    }
+
+    //let currentTeam = parseInt(document.querySelector(".rosterDropdown").value)
     let html = `<div id="team-players"><ul>` // need if statement
     for (const player of players) {
         
@@ -31,7 +38,7 @@ export const playersTeam = () => {
 }
 
 export const teamDisplay = () => {
-    const teams = allTeams() // using the imported all teams dropdown
+    const teams = allTeams("rosterDropdown") // using the imported all teams dropdown
     let html = `<h2>Select a Team</h2>`
     html += `${teams}` // imported teams dropdown
     html += `${playersTeam()}` // list of players on the team
@@ -52,7 +59,7 @@ mainContainer.addEventListener("click", clickEvent => {
 
 // change event - not yet fleshed out - query select updates html innerHTML to ID renderedData - second function
 mainContainer.addEventListener("change", changeEvent => {
-    if (changeEvent.target.id === "teams") {
+    if (changeEvent.target.className === "rosterDropdown") {
         // lists roster for that team
         const renderHTML = document.querySelector("#team-players")
         renderHTML.innerHTML = playersTeam()
