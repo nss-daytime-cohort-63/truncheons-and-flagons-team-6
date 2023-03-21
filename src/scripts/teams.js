@@ -2,11 +2,11 @@ import { getTeams, sendTeam } from "./dataAccess.js";
 
 
 
-export const allTeams =() =>{
+export const allTeams = (newClass) => {
 const teams = getTeams()
 let html =`<select id="teams">`
 let teamsList = teams.map((team)=>{
-    return `<option value ="${team.id}">${team.name}</option>`
+    return `<option value ="${team.id} class=${newClass}">${team.name}</option>`
 })
 html += teamsList.join('')
 html += `</select>`

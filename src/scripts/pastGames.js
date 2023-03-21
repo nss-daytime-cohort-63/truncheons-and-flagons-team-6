@@ -30,3 +30,12 @@ export const renderPastGames = () =>{
     
     return html
 }
+
+
+mainContainer.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "pastGames") {
+       const renderedData = document.querySelector("#renderedData")
+        renderedData.innerHTML = renderPastGames()
+ 
+    }
+})
