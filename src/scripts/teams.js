@@ -45,6 +45,10 @@ mainContainer.addEventListener("click", clickEvent => {
         }
 
         // Send the data to the API for permanent storage
-        sendTeam(dataToSendToAPI)
+        if(newTeamName === ""){
+            window.alert("Please populate the team name.")
+        }  else{
+            sendTeam(dataToSendToAPI)
+        }
     }
 })
