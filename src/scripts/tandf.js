@@ -1,3 +1,4 @@
+import { leaderBoard } from "./leaderboard.js"
 import { NewGame, newGameForm } from "./newGame.js"
 import { PastGames, renderPastGames } from "./pastGames.js"
 import { AddPlayer } from "./players.js"
@@ -31,6 +32,7 @@ export const TruncheonAndFlagons = () => {
         ${AddPlayer()}
         </div>
         <div id="leaderboard">
+        ${leaderBoard()}
         </div>
     </aside>
     <section id="renderedData">
