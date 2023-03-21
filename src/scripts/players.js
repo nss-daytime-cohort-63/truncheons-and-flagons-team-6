@@ -12,7 +12,7 @@ export const AddPlayer = () => {
             <input class = "input" name = "PlastName" type = "text" placeholder="Last Name"/>
         </div>
         <div class = "field">
-        ${allTeams()}
+        ${allTeams("addAPlayer")}
         </div>
         <button class="button" id="submitNewPlayer">Add Player</button>
     `
@@ -28,7 +28,7 @@ mainContainer.addEventListener("click", clickEvent => {
         // Get what the user typed into the form fields
         const newFirstName = document.querySelector("input[name='PfirstName']").value
         const newLastName = document.querySelector("input[name='PlastName']").value
-        const playerTeamId = parseInt(document.querySelector("select[id='teams']").value)
+        const playerTeamId = parseInt(document.querySelector("select[class='addAPlayer']").value)
         
        
         // Make an object out of the user input
