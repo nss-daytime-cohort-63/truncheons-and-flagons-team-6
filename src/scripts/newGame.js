@@ -28,15 +28,15 @@ export const NewGame = () => {
 }
 
 export const newGameForm = () => {
-    let html =`<select id="team1Select" >
+    let html =`<select id="team1Select" class="newGameSelect" >
                     <option value="">Select Team 1</option>
                      ${_teamSelectOptionBuilder()}
                 </select>
-                <select id="team2Select" >
+                <select id="team2Select" class="newGameSelect">
                     <option value="">Select Team 2</option>
                     ${_teamSelectOptionBuilder()}
                 </select>
-                <select id="team3Select" >
+                <select id="team3Select" class="newGameSelect">
                     <option value="">Select Team 3</option>
                     ${_teamSelectOptionBuilder()}
                 </select>

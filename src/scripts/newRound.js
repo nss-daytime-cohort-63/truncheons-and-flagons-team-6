@@ -167,5 +167,14 @@ mainContainer.addEventListener("click", (clickEvent) => {
     .then(()=> {sendScore(scoreToSend2)})
     .then(()=> {sendScore(scoreToSend3)})
     .then(()=> {mainContainer.dispatchEvent(new CustomEvent("stateChanged"))})
+
+    scoreData = {};
+
+    currentRound = 1;
+    team1Id = 0;
+    team2Id = 0;
+    team3Id = 0;
   }
+
+
 });

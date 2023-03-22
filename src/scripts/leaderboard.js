@@ -1,8 +1,8 @@
 import { getTeams, getScores, getPlayers } from "./dataAccess.js"
 export const leaderBoard =() =>{
     let html =  `
-    <h2>Leaderboard</h2>
-    <table>
+    <h2 class="leaderboardHeader">Leaderboard</h2>
+    <table class="leaderboard">
     <tr>
     <th>Team Name</th>
     <th># of Members</th>
