@@ -1,7 +1,6 @@
 const applicationState = {}
 const API = "http://localhost:8088"
 
-
 export const fetchPlayers = () => {
     return fetch(`${API}/players`)
         .then(response => response.json())
@@ -53,6 +52,22 @@ export const sendPlayer = (newPlayer) => {
 
 
     return fetch(`${API}/players`, fetchOptions)
+    .then(response => response.json())
+    .then(() => {
+        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+    })
+}
+export const changeTeam = (player) => {
+    const fetchOptions = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(player)
+    }
+
+
+    return fetch(`${API}/players/${player.id}`, fetchOptions)
     .then(response => response.json())
     .then(() => {
         mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
