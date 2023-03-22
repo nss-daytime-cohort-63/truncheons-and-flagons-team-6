@@ -1,4 +1,4 @@
-import { getPlayers, getTeams } from "./dataAccess.js"
+import { getPlayers, getTeams, changeTeam } from "./dataAccess.js"
 import { allTeams } from "./teams.js"
 
 
@@ -29,9 +29,10 @@ export const playersTeam = () => {
     for (const player of players) {
         
             if (player.teamId === currentTeam) {
-                html += `<li>${player.name}</li>`
+                html += `<li>${player.name}${allTeams(`rosterChange ${player.id}`)}${activeCheckbox(player)}</li>`
+                
             }
-        
+    
     }
     html += `</ul></div>`
     return html
@@ -63,5 +64,37 @@ mainContainer.addEventListener("change", changeEvent => {
         // lists roster for that team
         const renderHTML = document.querySelector("#team-players")
         renderHTML.innerHTML = playersTeam()
+        let teamSelect = document.querySelectorAll(".rosterChange")
+        for(let i = 0; i < teamSelect.length; i++){
+            teamSelect[i].value = parseInt(document.querySelector(".rosterDropdown").value)
+        }
+        
+    }
+})
+mainContainer.addEventListener("change", changeEvent => {
+    if(changeEvent.target.className.split(" ")[0] === "rosterChange"){
+        let currentPlayerId = parseInt(changeEvent.target.className.split(" ")[1])
+        let players = getPlayers()
+        let traitor = players[currentPlayerId]
+        traitor.teamId = parseInt(changeEvent.target.value)
+        traitor.isActive = false
+        changeTeam(traitor)
+    }
+})
+const activeCheckbox = (player) => {
+    if(player.isActive === true){
+        return `<input type="checkbox" class="checkbox ${player.id}" checked>`
+    }else {
+        return `<input type="checkbox" class="checkbox ${player.id}">`
+    }
+}
+mainContainer.addEventListener("change", changeEvent => {
+    if(changeEvent.target.className.split(" ")[0] === "checkbox"){
+        let currentPlayerId = parseInt(changeEvent.target.className.split(" ")[1])
+        let players = getPlayers()
+        let traitor = players[currentPlayerId]
+        traitor.isActive = !traitor.isActive
+        changeTeam(traitor)
+        
     }
 })
