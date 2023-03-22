@@ -1,4 +1,5 @@
 import { getTeams } from "./dataAccess.js"
+import { roundForm, inputRowGenerator } from "./newRound.js";
 
 let team1 = 0;
 let team2 = 0;
@@ -52,9 +53,13 @@ const mainContainer = document.querySelector("#mainContainer")
 })
 */
 mainContainer.addEventListener("click", clickEvent => {
+    const renderHTML = document.querySelector("#renderedData")
+    
     if (clickEvent.target.id === "startGame") {
         if(team1 !== 0 && team1 !== team2 && team1 !== team3 && team2 !== 0 && team3 !== 0 && !!team1 && !!team2 && !!team3 && team2 !== team3){
-            console.log(":)")
+            renderHTML.innerHTML = roundForm(team1, team2, team3)
+            const gameScore = document.querySelector("#gameScore")
+            gameScore.innerHTML += inputRowGenerator(1)
         }
         else{
             window.alert("You must select unique teams to start a game!")
@@ -67,6 +72,7 @@ mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "newGame") {
        const renderedData = document.querySelector("#renderedData")
         renderedData.innerHTML = newGameForm()
+        
  
     }
 })

@@ -93,6 +93,22 @@
     {
       "id": 0,
       "date": 1679336115
+    },
+    {
+      "date": "3/21/2023",
+      "id": 1
+    },
+    {
+      "date": "3/21/2023",
+      "id": 2
+    },
+    {
+      "date": "3/21/2023",
+      "id": 3
+    },
+    {
+      "date": "3/22/2023",
+      "id": 4
     }
   ],
   "scores": [
@@ -113,6 +129,78 @@
       "completedGameId": 0,
       "teamId": 3,
       "score": 4
+    },
+    {
+      "completedGameId": 1,
+      "teamId": 1,
+      "score": 3,
+      "id": 3
+    },
+    {
+      "completedGameId": 1,
+      "teamId": 2,
+      "score": 4,
+      "id": 4
+    },
+    {
+      "completedGameId": 1,
+      "teamId": 3,
+      "score": 5,
+      "id": 5
+    },
+    {
+      "completedGameId": 2,
+      "teamId": 1,
+      "score": 4,
+      "id": 6
+    },
+    {
+      "completedGameId": 2,
+      "teamId": 2,
+      "score": 5,
+      "id": 7
+    },
+    {
+      "completedGameId": 2,
+      "teamId": 3,
+      "score": 6,
+      "id": 8
+    },
+    {
+      "completedGameId": 3,
+      "teamId": 1,
+      "score": 4,
+      "id": 9
+    },
+    {
+      "completedGameId": 3,
+      "teamId": 3,
+      "score": 3,
+      "id": 10
+    },
+    {
+      "completedGameId": 3,
+      "teamId": 2,
+      "score": 3,
+      "id": 11
+    },
+    {
+      "completedGameId": 4,
+      "teamId": 1,
+      "score": 6,
+      "id": 12
+    },
+    {
+      "completedGameId": 4,
+      "teamId": 2,
+      "score": 6,
+      "id": 13
+    },
+    {
+      "completedGameId": 4,
+      "teamId": 3,
+      "score": 6,
+      "id": 14
     }
   ]
 }
