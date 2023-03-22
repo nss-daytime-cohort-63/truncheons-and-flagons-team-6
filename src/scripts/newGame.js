@@ -1,4 +1,4 @@
-import { getTeams } from "./dataAccess.js"
+import { getTeams, getPlayers } from "./dataAccess.js"
 import { roundForm, inputRowGenerator } from "./newRound.js";
 
 let team1 = 0;
@@ -7,10 +7,13 @@ let team3 = 0;
 
 const _teamSelectOptionBuilder = () => {
     const teams = getTeams();
+    const players = getPlayers();
     let html = "";
     teams.forEach(team => {
         if (team.id !== 0) {
-            html += `<option value="${team.id}">${team.name}</option>`
+            if(players.filter(player => {return player.teamId === team.id && player.isActive === true}).length === 3){
+                html += `<option value="${team.id}">${team.name}</option>`
+            }
         }
     })
     return html;
